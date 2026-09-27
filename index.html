@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Rima ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #160b16, #3b1028, #170817);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* floating hearts */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: float 7s linear infinite;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* envelope page */
+.container {
+    width: 92%;
+    max-width: 430px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    margin-bottom: 8px;
+    color: #ffb6d9;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: .8;
+    margin-bottom: 35px;
+}
+
+.envelope {
+    width: 280px;
+    height: 180px;
+    background: #e91e63;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(255, 20, 100, .35);
+    transition: .5s;
+}
+
+.envelope:hover {
+    transform: scale(1.04);
+}
+
+.flap {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 95px solid #ff4f8b;
+    top: 0;
+    left: 0;
+    transform-origin: top;
+    transition: 1s;
+    z-index: 3;
+}
+
+.letter {
+    position: absolute;
+    background: #fff8fc;
+    color: #4b2638;
+    width: 235px;
+    height: 145px;
+    left: 22px;
+    top: 20px;
+    border-radius: 5px;
+    transition: 1s;
+    padding: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    z-index: 1;
+}
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    transform: translateY(-105px);
+}
+
+.tap {
+    margin-top: 35px;
+    font-size: 14px;
+    color: #ffb6d9;
+}
+
+/* letter page */
+#loveLetter {
+    display: none;
+    width: 92%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: rgba(255,255,255,.96);
+    color: #472535;
+    border-radius: 18px;
+    padding: 28px 23px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+#loveLetter h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #e91e63;
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+#loveLetter p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 21px;
+    line-height: 1.55;
+    margin-bottom: 15px;
+}
+
+.signature {
+    text-align: right;
+    color: #e91e63;
+    font-size: 25px !important;
+    margin-top: 20px;
+}
+
+.close {
+    margin-top: 12px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="home">
+
+    <h1>For My Rima ❤️</h1>
+
+    <div class="subtitle">
+        A little surprise from Mahin 💌
+    </div>
+
+    <div class="envelope" id="envelope" onclick="openLetter()">
+
+        <div class="flap"></div>
+
+        <div class="letter">
+            To My Love ❤️
+        </div>
+
+    </div>
+
+    <div class="tap">
+        💕 Tap the envelope to open 💕
+    </div>
+
+</div>
+
+
+<div id="loveLetter">
+
+    <h2>Dear Rima, 🌸❤️</h2>
+
+    <p>
+        জানো, তোমাকে ভালোবাসি—এই কথাটা হয়তো খুব ছোট
+        একটা বাক্য। কিন্তু এই ছোট্ট কথাটার ভেতরে আমার
+        অনেক অনুভূতি লুকিয়ে আছে। 🥺❤️
+    </p>
+
+    <p>
+        তুমি আমার জীবনে আসার পর থেকে ছোট ছোট মুহূর্তগুলোও
+        যেন অনেক সুন্দর হয়ে গেছে। তোমার একটা মেসেজ,
+        তোমার একটা হাসি, তোমার সাথে একটু কথা—
+        এসবই আমার দিনের সবচেয়ে সুন্দর অংশ। 💕
+    </p>
+
+    <p>
+        আমি জানি না ভবিষ্যতে আমাদের গল্পটা কতদূর যাবে,
+        কিন্তু একটা জিনিস জানি—আজ তোমাকে যেভাবে ভালোবাসি,
+        সেই ভালোবাসাটা আমি খুব যত্ন করে রাখতে চাই। 🫶
+    </p>
+
+    <p>
+        তুমি শুধু আমার ভালোবাসার মানুষ না, তুমি আমার শান্তি,
+        আমার হাসির একটা কারণ, আর আমার মনের খুব আপন একটা
+        জায়গা। 🌷
+    </p>
+
+    <p>
+        কখনো যদি আমার ওপর রাগ করো, একটু সময় নিয়ে আবার
+        ফিরে এসো। আর কখনো যদি মনে হয় তুমি একা, মনে রেখো—
+        কোথাও একজন Mahin আছে, যে তোমাকে খুব আপন করে
+        ভালোবাসে। ❤️
+    </p>
+
+    <p>
+        Rima, তুমি আমার কাছে কোনো perfect গল্পের চরিত্র নও—
+        তুমি আমার নিজের গল্পের সবচেয়ে সুন্দর অধ্যায়। 📖❤️
+    </p>
+
+    <p>
+        I love you, Rima. আজ, কাল, আর যতদিন আমার হৃদয়ে
+        ভালোবাসা থাকবে। 🥹❤️
+    </p>
+
+    <p class="signature">
+        — তোমার Mahin 💌🌹
+    </p>
+
+    <button class="close" onclick="closeLetter()">
+        ❤️ Read Again
+    </button>
+
+</div>
+
+
+<script>
+
+function openLetter() {
+
+    const envelope = document.getElementById("envelope");
+
+    envelope.classList.add("open");
+
+    setTimeout(() => {
+        document.getElementById("home").style.display = "none";
+        document.getElementById("loveLetter").style.display = "block";
+    }, 1300);
+}
+
+function closeLetter() {
+
+    document.getElementById("loveLetter").style.display = "none";
+    document.getElementById("home").style.display = "block";
+
+    document.getElementById("envelope").classList.remove("open");
+}
+
+
+/* floating hearts */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = ["❤️","💗","💕","💖","💘","🌸"];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+}
+
+setInterval(createHeart, 500);
+
+</script>
+
+</body>
+</html>
